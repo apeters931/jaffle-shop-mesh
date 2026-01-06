@@ -22,6 +22,7 @@ next_current_project_cross_project_references as (
   where
     distance = 1
     and parent_project_name != child_project_name
+    and child_project_name = '{{ project_name }}'
 ),
 
 -- filter the current cross project references to just the project the PR is being opened in
